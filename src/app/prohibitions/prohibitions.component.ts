@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { PmService } from '../services/pm.service';
 import {AlertService} from '../services/alert.service';
-import {PmNode} from '../model/pmnode';
+import {PmNode} from '../model/PmNode';
 import {ActivatedRoute, Params} from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 

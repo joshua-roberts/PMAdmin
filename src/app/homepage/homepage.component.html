@@ -1,0 +1,62 @@
+<div>
+  <app-nav-bar [homepageActive]="true"></app-nav-bar>
+  <div class="container">
+    <!--welcome message and search bar-->
+    <div class="row top-buffer align-items-center">
+      <div class="col-8">
+        <h2 class="display-4">
+          Welcome John
+        </h2>
+      </div>
+      <div class="col-4">
+        <div class="input-group mb-3 float-right">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Search</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Search...">
+        </div>
+      </div>
+    </div>
+
+    <!--applications-->
+    <div class="row sep-buffer">
+      <div class="col-12">
+        <h4>
+          Applications
+        </h4>
+      </div>
+    </div>
+    <div class="row top-buffer justify-content-start">
+      <div class="col-1 border btn-outline-primary app-buffer" (click)="openEGrant()">
+        <p class="h2 text-center" style="margin-top: 8px">
+          G
+        </p>
+        <p class="h6 text-dark text-center">E-grant</p>
+      </div>
+      <div class="col-1 border btn-outline-primary app-buffer" (click)="openEmployeeRecords()">
+        <p class="h2 text-center" style="margin-top: 8px">
+          R
+        </p>
+        <p class="h6 text-dark text-center">Employee Records</p>
+      </div>
+      <div class="col-1 border btn-outline-primary app-buffer" (click)="openMedicalRecords()">
+        <p class="h2 text-center" style="margin-top: 8px">
+          M
+        </p>
+        <p class="h6 text-dark text-center" style="word-wrap: break-word;">Medical Records</p>
+      </div>
+      <div class="col-1 border btn-outline-primary app-buffer" (click)="openEmail()">
+        <p class="h2 text-center" style="margin-top: 8px">
+          E
+        </p>
+        <p class="h6 text-dark text-center flex-wrap">Email</p>
+      </div>
+      <div class="col-1 border btn-outline-primary app-buffer" routerLink="/dashboard">
+        <p class="h2 text-center" style="margin-top: 8px">
+          D
+        </p>
+        <p class="h6 text-dark text-center flex-wrap">Dash Board</p>
+      </div>
+    </div>
+  </div>
+</div>

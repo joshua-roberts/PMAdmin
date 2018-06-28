@@ -16,6 +16,7 @@ import { NLPMComponent } from './nlpm/nlpm.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { AnalyticsComponent } from './analytics/analytics.component';
     NLPMComponent,
     DashboardComponent,
     UsersComponent,
-    AnalyticsComponent
+    AnalyticsComponent,
+    HomepageComponent
   ],
   providers: [
     PmService,

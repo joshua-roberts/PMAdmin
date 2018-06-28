@@ -3,14 +3,20 @@ import {Headers, URLSearchParams} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { PmNode } from '../model/pmnode';
+import { PmNode } from '../model/PmNode';
 import {AlertService} from './alert.service';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable()
 export class PmService {
 
-  private headers = new Headers({'Content-Type': 'application/json'});
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      'Authorization': 'my-auth-token'
+    })
+  };
+  // private httpOptions = new HttpHeaders({'Content-Type': 'application/json'});
   private nodesUrl = 'http://localhost:8080/pm/api/nodes';
   private assignmentsUrl = 'http://localhost:8080/pm/api/assignments';
   private associationsUrl = 'http://localhost:8080/pm/api/associations';
@@ -45,7 +51,7 @@ export class PmService {
     const params = new URLSearchParams();
     params.set('session', localStorage.getItem('SESSION_ID'));
     return this.http
-      .post(`${url}?${params}`, data, this.headers)
+      .post(`${url}?${params}`, data, this.httpOptions)
       .toPromise()
       .then(response => {
         return this.doResponse(response);
@@ -57,7 +63,7 @@ export class PmService {
     const params = new URLSearchParams();
     params.set('session', localStorage.getItem('SESSION_ID'));
     return this.http
-      .put(`${url}?${params}`, data, this.headers)
+      .put(`${url}?${params}`, data, this.httpOptions)
       .toPromise()
       .then(response => {
         return this.doResponse(response);
@@ -69,7 +75,7 @@ export class PmService {
       params = new URLSearchParams();
     }
     params.set('session', localStorage.getItem('SESSION_ID'));
-    return this.http.delete(`${url}?${params}`, this.headers)
+    return this.http.delete(`${url}?${params}`, this.httpOptions)
       .toPromise()
       .then(response => {
         return this.doResponse(response);

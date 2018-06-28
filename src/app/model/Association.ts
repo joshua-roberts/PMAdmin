@@ -1,4 +1,4 @@
-import { PmNode } from './pmnode';
+import { PmNode } from './PmNode';
 
 export class Association {
   constructor(

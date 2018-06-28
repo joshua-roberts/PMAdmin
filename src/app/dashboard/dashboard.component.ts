@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AlertService} from '../services/alert.service';
 import {ActivatedRoute} from '@angular/router';
 import {PmService} from '../services/pm.service';
-import {PmNode} from '../model/pmnode';
+import {PmNode} from '../model/PmNode';
 
 @Component({
   selector: 'app-dashboard',
