@@ -9,6 +9,7 @@
 .app-buffer {
   margin-right:20px;
   margin-left:20px;
+  cursor: pointer;
 }
 
 .custom-bg {

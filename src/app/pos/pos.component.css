@@ -1,0 +1,18 @@
+.top-buffer {
+  margin-top:20px;
+}
+
+.sep-buffer {
+  margin-top:40px;
+}
+
+.app-buffer {
+  margin-right:20px;
+  margin-left:20px;
+}
+
+.scroller {
+  height: 85vh;
+  overflow-y: scroll;
+  width: 100%;
+}

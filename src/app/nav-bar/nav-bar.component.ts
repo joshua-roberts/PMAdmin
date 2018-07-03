@@ -15,4 +15,5 @@ export class NavBarComponent {
   @Input() prohsActive: boolean;
   @Input() analyticsActive: boolean;
   @Input() homepageActive: boolean;
+  @Input() posActive: boolean;
 }

@@ -1,0 +1,11 @@
+<app-nav-bar [posActive]="true"></app-nav-bar>
+<div class="container">
+  <div class="row top-buffer">
+    <div class="col-4 border-right scroller">
+      <app-list (eleClicked)="onDocClick($event)" [level]="0" [root]="pos"></app-list>
+    </div>
+    <div class="col-8 border-left">
+      <h1>{{selectedDoc}}</h1>
+    </div>
+  </div>
+</div>

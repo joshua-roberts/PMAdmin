@@ -1,0 +1,16 @@
+.lst-item {
+  color: black;
+}
+
+.lst-item:hover {
+  cursor: pointer;
+}
+
+.folder {
+  text-decoration: none;
+  color: black;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
+}

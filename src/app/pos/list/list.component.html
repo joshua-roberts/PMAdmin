@@ -1,0 +1,24 @@
+<div *ngIf="root.children">
+  <a class="folder" data-toggle="collapse" [href]="'#collapse' + root.name">
+    <i class="fa fa-user" *ngIf="level === 0"> {{root.name}}</i>
+    <i class="fa fa-folder-o" *ngIf="level !== 0"> {{root.name}}</i>
+  </a>
+</div>
+
+<div *ngIf="!root.children">
+  <a class="folder">
+    <i class="fa fa-user" *ngIf="level === 0"> {{root.name}}</i>
+    <i class="fa fa-file-text" *ngIf="level !== 0"> {{root.name}}</i>
+  </a>
+</div>
+
+<div class="collapse" [id]="'collapse' + root.name" *ngIf="root.children">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item list-group-item-action lst-item"
+        (dblclick)="onClick(child, $event)"
+        [ngStyle]="{'background-color': colors[level]}"
+        *ngFor="let child of root.children; let i = index">
+      <app-list [root]="child" [level]="level + 1"></app-list>
+    </li>
+  </ul>
+</div>

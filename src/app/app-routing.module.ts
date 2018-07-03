@@ -8,6 +8,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {UsersComponent} from './users/users.component';
 import {AnalyticsComponent} from './analytics/analytics.component';
 import {HomepageComponent} from './homepage/homepage.component';
+import {PosComponent} from './pos/pos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'prohibitions', component: ProhibitionsComponent },
   { path: 'analytics', component: AnalyticsComponent },
   { path: 'nlpm', component: NLPMComponent },
-  { path: 'homepage', component: HomepageComponent }
+  { path: 'homepage', component: HomepageComponent },
+  { path: 'pos', component: PosComponent }
 ];
 
 @NgModule({

@@ -17,6 +17,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { PosComponent } from './pos/pos.component';
+import { ListComponent } from './pos/list/list.component';
 
 @NgModule({
   imports: [
@@ -36,7 +38,9 @@ import { HomepageComponent } from './homepage/homepage.component';
     DashboardComponent,
     UsersComponent,
     AnalyticsComponent,
-    HomepageComponent
+    HomepageComponent,
+    PosComponent,
+    ListComponent
   ],
   providers: [
     PmService,
