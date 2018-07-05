@@ -2,12 +2,13 @@
   color: black;
 }
 
-.lst-item:hover {
-  cursor: pointer;
-}
+/*.lst-item:hover {*/
+  /*filter: brightness(98%);*/
+/*}*/
 
 .folder {
   text-decoration: none;
+  cursor: pointer;
   color: black;
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */

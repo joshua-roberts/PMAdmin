@@ -1,4 +1,11 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  Renderer2
+} from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -9,14 +16,22 @@ export class ListComponent implements OnInit {
   @Input() root;
   @Input() level;
   @Output() eleClicked = new EventEmitter<any>();
-  colors = ['#e5f1ff', '#d3e7ff', '#bad9ff', '#a3ccff', '#8ec0ff', '#7ab5ff', '#5ba4ff', '#3f94ff', '#2887ff', '#167dff'];
+  selectedChild;
+  colors;
 
-  constructor() { }
+  constructor(private render: Renderer2) { }
 
   ngOnInit() {
+    this.selectedChild = null;
+    this.colors = ['#e5f1ff', '#d3e7ff', '#bad9ff', '#a3ccff', '#8ec0ff', '#7ab5ff', '#5ba4ff', '#3f94ff', '#2887ff', '#167dff'];
   }
 
-  onClick (childRoot, event) {
+  onDblClick (childRoot, event) {
     this.eleClicked.emit([childRoot, event]);
+    this.selectedChild = childRoot[0];
+  }
+
+  isObject (type: string) {
+    return (type.toLowerCase() === 'o');
   }
 }

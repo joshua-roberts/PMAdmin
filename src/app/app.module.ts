@@ -19,6 +19,8 @@ import { AnalyticsComponent } from './analytics/analytics.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PosComponent } from './pos/pos.component';
 import { ListComponent } from './pos/list/list.component';
+import { AppBoxComponent } from './app-box/app-box.component';
+import {ApplicationService} from './services/application.service';
 
 @NgModule({
   imports: [
@@ -40,11 +42,13 @@ import { ListComponent } from './pos/list/list.component';
     AnalyticsComponent,
     HomepageComponent,
     PosComponent,
-    ListComponent
+    ListComponent,
+    AppBoxComponent
   ],
   providers: [
     PmService,
-    AlertService
+    AlertService,
+    ApplicationService
   ],
   bootstrap: [AppComponent]
 })

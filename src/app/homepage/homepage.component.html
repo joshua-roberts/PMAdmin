@@ -30,36 +30,11 @@
         </div>
       </div>
       <div class="row top-buffer justify-content-start">
-        <div class="col-1 border btn-outline-primary app-buffer" (click)="openEGrant()">
-          <p class="h2 text-center" style="margin-top: 8px">
-            G
-          </p>
-          <p class="h6 text-dark text-center">E-grant</p>
-        </div>
-        <div class="col-1 border btn-outline-primary app-buffer" (click)="openEmployeeRecords()">
-          <p class="h2 text-center" style="margin-top: 8px">
-            R
-          </p>
-          <p class="h6 text-dark text-center">Employee Records</p>
-        </div>
-        <div class="col-1 border btn-outline-primary app-buffer" (click)="openMedicalRecords()">
-          <p class="h2 text-center" style="margin-top: 8px">
-            M
-          </p>
-          <p class="h6 text-dark text-center" style="word-wrap: break-word;">Medical Records</p>
-        </div>
-        <div class="col-1 border btn-outline-primary app-buffer" routerLink="/pos">
-          <p class="h2 text-center" style="margin-top: 8px">
-            P
-          </p>
-          <p class="h6 text-dark text-center flex-wrap">POS</p>
-        </div>
-        <div class="col-1 border btn-outline-primary app-buffer" routerLink="/dashboard">
-          <p class="h2 text-center" style="margin-top: 8px">
-            D
-          </p>
-          <p class="h6 text-dark text-center flex-wrap">Dash Board</p>
-        </div>
+        <app-app-box class="app-buffer" [symbol]="'E'" [name]="'E-grant'" (click)="openEGrant()"></app-app-box>
+        <app-app-box class="app-buffer" [symbol]="'R'" [name]="'Employee Records'" (click)="openEmployeeRecords()"></app-app-box>
+        <app-app-box class="app-buffer" [symbol]="'M'" [name]="'Medical Records'" (click)="openMedicalRecords()"></app-app-box>
+        <app-app-box class="app-buffer" [symbol]="'P'" [name]="'POS'" routerLink="/pos"></app-app-box>
+        <app-app-box class="app-buffer" [symbol]="'D'" [name]="'Dashboard'" routerLink="/dashboard"></app-app-box>
       </div>
     </div>
 

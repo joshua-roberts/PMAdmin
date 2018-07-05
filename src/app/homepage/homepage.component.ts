@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ApplicationService} from '../services/application.service';
 
 @Component({
   selector: 'app-homepage',
@@ -6,23 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  constructor() { }
+  constructor(private appService: ApplicationService) { }
 
   ngOnInit() {
   }
 
   openEGrant () {
-    alert('open E-grant');
+    this.appService.openEGrant();
   }
 
   openEmployeeRecords () {
-    alert('open Employee Records');
+    this.appService.openEmployeeRecords();
   }
 
   openMedicalRecords () {
-    alert('open Medical Records');
-  }
-  openEmail () {
-    alert('open E-Mail');
+    this.appService.openMedicalRecords();
   }
 }

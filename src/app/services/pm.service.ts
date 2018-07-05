@@ -315,6 +315,7 @@ export class PmService {
       .then(response => {
         const sessionId = response['entity'];
         localStorage.setItem('SESSION_ID', sessionId);
+        localStorage.setItem('SESSION_USER', username);
         return sessionId;
       });
   }

@@ -1,7 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Renderer2} from '@angular/core';
 import {Router} from '@angular/router';
-import {PmService} from '../services/pm.service';
-import {AlertService} from '../services/alert.service';
+import {ApplicationService} from '../services/application.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -16,4 +15,26 @@ export class NavBarComponent {
   @Input() analyticsActive: boolean;
   @Input() homepageActive: boolean;
   @Input() posActive: boolean;
+
+  constructor(private render: Renderer2, private appService: ApplicationService) {}
+
+  openGo(el) {
+    this.render.addClass(el, 'reveal');
+  }
+
+  closeGo(el) {
+    this.render.removeClass(el, 'reveal');
+  }
+
+  openEGrant () {
+    this.appService.openEGrant();
+  }
+
+  openEmployeeRecords () {
+    this.appService.openEmployeeRecords();
+  }
+
+  openMedicalRecords () {
+    this.appService.openMedicalRecords();
+  }
 }

@@ -1,6 +1,57 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 55px">
+
+  <i class="fa fa-align-justify mr-3" style="font-size: 20px; color: white; cursor: pointer"
+     (click)="openGo(sideNav)"></i>
+
+  <div class="navbar-side bg-light" #sideNav>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <i class="fa fa-align-justify mt-3" style="font-size: 22px; color: black; cursor: pointer"
+             (click)="closeGo(sideNav)"></i>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-12">
+          <h4>
+            Applications
+          </h4>
+        </div>
+      </div>
+      <div class="row ml-3">
+        <app-app-box class="app-buffer" [symbol]="'E'" [name]="'E-grant'"
+                     (click)="openEGrant()"></app-app-box>
+        <app-app-box class="app-buffer" [symbol]="'R'" [name]="'Employee Records'"
+                     (click)="openEmployeeRecords()"></app-app-box>
+        <app-app-box class="app-buffer" [symbol]="'M'" [name]="'Medical Records'"
+                     (click)="openMedicalRecords()"></app-app-box>
+        <app-app-box class="app-buffer" [symbol]="'P'" [name]="'POS'"
+                     routerLink="/pos"></app-app-box>
+        <app-app-box class="app-buffer" [symbol]="'D'" [name]="'Dashboard'"
+                     routerLink="/dashboard"></app-app-box>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-12">
+          <h4>
+            Account
+          </h4>
+        </div>
+      </div>
+      <div class="row ml-3">
+        <app-app-box class="app-buffer" [symbol]="'S'" [name]="'Settings'"
+                     (click)="openEGrant()"></app-app-box>
+        <app-app-box class="app-buffer" [symbol]="'L'" [name]="'Logout'"
+                     (click)="openEGrant()"></app-app-box>
+      </div>
+    </div>
+  </div>
+
   <a class="navbar-brand" href="#">Policy Machine</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+          aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
     <span class="navbar-toggler-icon"></span>
   </button>
 
