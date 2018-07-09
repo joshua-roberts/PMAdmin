@@ -23,7 +23,8 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.selectedChild = null;
-    this.colors = ['#e5f1ff', '#d3e7ff', '#bad9ff', '#a3ccff', '#8ec0ff', '#7ab5ff', '#5ba4ff', '#3f94ff', '#2887ff', '#167dff'];
+    // this.colors = ['#e5f1ff', '#d3e7ff', '#bad9ff', '#a3ccff', '#8ec0ff', '#7ab5ff', '#5ba4ff', '#3f94ff', '#2887ff', '#167dff'];
+    this.colors = ['#d3e7ff', '#bad9ff', '#a3ccff', '#8ec0ff', '#7ab5ff', '#5ba4ff', '#3f94ff', '#2887ff', '#167dff'];
   }
 
   onDblClick (childRoot, event) {

@@ -150,9 +150,9 @@
   overflow-x: scroll;
   z-index: 1000;
 
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-105%);
+  -ms-transform: translateX(-105%);
+  transform: translateX(-105%);
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
 }
@@ -179,4 +179,9 @@
 
 .side-link {
   padding-left: 2rem;
+}
+
+.menubtn {
+  font-size: 20px;
+  cursor: pointer;
 }
